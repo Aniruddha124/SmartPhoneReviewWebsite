@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(221, 220, 220);
+    color:black;
+    font-family: 'Raleway', sans-serif;
+}
+
+#footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 15px;
+}
+
+
+.popularbrandscontent a{
+  color:black;
+}
+.popularbrandscontent a:hover{
+    cursor: pointer;
+    color:red;
+}
+#Apple,#Google,#Huawei{
+  background-color: #fffefe;
+  padding-top:10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+li{
+    list-style-type: none;
+}
+
+img{
+    height:150px;
+    width:150px;
+}
+
+@media (max-width: 800px) {
+  #Apple,#Google,#Huawei{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+}

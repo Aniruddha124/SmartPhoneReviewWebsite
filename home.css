@@ -1,0 +1,346 @@
+body {
+	background-color: rgb(221, 220, 220);
+	margin-left: 50px;
+	margin-right: 50px;
+	font-family: 'Raleway', sans-serif;
+}
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #ffffff;
+	display: block;
+	transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus {
+	color: #ee0606;
+}
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 50px;
+}
+.overlay-content {
+  color:white;
+	position: relative;
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#phones_array{
+	display: none;
+  text-align: left;
+	background-color: #112D32;
+	
+}
+
+
+#search_icon{
+	margin-top: 20px;
+	height: 40px;
+	width: 40px;
+}
+#search_icon:hover{
+	cursor: pointer;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+} 
+
+.navBar{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #444444; 
+	height: 38.5px;
+}
+
+a{
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	color:#1c232b;
+	font-weight: bold;
+}
+.navLinks{
+  
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navLinks a{
+  color:white;
+}
+.navLinks:hover{
+	background-color: #039c0a;
+}
+#search_results{
+	display: none;
+	border : solid #07bdb1;
+	margin-top: 10px;
+	width: 600px;
+	margin-left: 450px;	
+}
+
+#search_result_child{
+	background-color: #112D32;
+}
+#logoSearch{
+	display:flex;
+	justify-content: space-between;
+}
+#searchbarbtn{
+	display:flex;
+}
+#search_bar{
+	margin-top: 29px;	
+}
+#search{
+	width:600px;
+	height:25px;
+	border-radius: 5px;
+	border : solid #07bdb1;
+}
+
+
+
+#pbLr{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#popularBrands{
+  color:white;
+	width:49.5%;
+  background-color: #444444; 
+	border: 2px solid #444444; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-flow: row wrap;	
+}
+#latestReleases{
+	width: 50%;
+  background-color: #444444;
+  color:white;
+	border: 2px solid #444444; 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+
+.pb,.up,.lr{
+  font-weight: bold;
+	width: 100%;
+	padding:10px;
+	color:black;
+  background-color: rgb(221, 220, 220);
+	font-size: 20px;
+}
+.pb:hover{
+	background-color: #039c0a;
+	color:white;
+	font-weight: bold;
+}
+
+.lr:hover{
+	background-color: #039c0a;
+	color:white;
+	font-weight: bold;
+}
+
+#newsPopPh{
+	margin-top: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+#news{	
+  background-color: #444444;
+  color:white;
+	border: 2px solid #444444; 
+	width:70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#upcomingPhones{
+  background-color: #444444;
+  color:white;
+  
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-flow: row wrap;
+	width:29.5%;
+	border: 2px solid #444444; 
+	height: 350px;
+}
+
+.up{
+  color:black;
+  background-color: rgb(221, 220, 220);
+	width: 100%;
+	font-size: 20px;
+}
+
+.up:hover{
+	background-color: #039c0a;
+	color:white;
+	font-weight: bold;
+  cursor: pointer;
+}
+#footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 15px;
+}
+
+
+
+.act_news{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly; 
+	background-color: white;
+	flex-flow: row-wrap; 
+  width: 100%;
+  
+}
+
+
+#p1_n1{
+	margin-left: 10px;
+	font-size: 25px;
+}
+#p2_n1{
+	margin-left: 10px;
+	font-size: 20px;
+}
+#news_desc{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+
+
+@media (max-width: 800px) {
+	a{
+		font-size: 14px;
+	}
+	
+	#logo{
+		font-size: 30px;
+	}
+	.container{
+		font-size: 15px;
+	}
+
+	#search{
+		width: 180px;
+		height: 15px;
+		margin-top: 20px;
+	}
+	
+	#search_icon{
+    height: 30px;
+    width: 30px;
+  }
+
+  .navBar{
+    padding:10px;
+    height: 150px;
+    align-items: flex-start;
+    justify-content: space-between;
+	  flex-direction: column !important;
+    flex-wrap: wrap;
+  }
+  .navLinks {
+    width: 100%;
+    font-weight: bold;
+    font-size:15px;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+ 
+	.pblr{
+	  width:100% !important; 
+	  flex-direction: column !important;
+	}
+	.popularBrands{
+		width:100% !important; 
+		padding:0px !important;
+	}
+	.latestReleases{
+		width:100% !important; 
+	}
+	  
+	#newsPopPh{
+		width:100% !important; 
+		flex-direction: column !important;
+	}
+	#news,#upcomingPhones{
+		width:100% !important; 
+		padding:0px !important;
+	}
+  #upcomingPhones{
+    margin-top:5px;
+  }
+
+	.act_news{
+		width:100% !important; 
+		padding:0px !important;
+	}
+	.news_img{
+		width: 100px;
+		height: 150px;
+	}
+
+	.overlay a {font-size: 20px}
+	.overlay .closebtn {
+	font-size: 40px;
+  justify-content: center;
+  align-items: center;
+	
+	}
+	 
+
+
+	#search_results{
+    justify-content: center;
+    align-items: center;
+		font-size: 15px;
+		margin-left: 40px;
+		width: 70%;
+	}
+	
+}
+

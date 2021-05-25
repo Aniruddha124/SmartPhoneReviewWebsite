@@ -1,0 +1,107 @@
+
+body{
+    /* font-family: 'Raleway', sans-serif; */
+}
+
+#registration_container{
+    /* height: 100vh; */
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#registration{
+    
+    border-radius: 5px;
+    padding: 20px; 
+    background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(235, 232, 232, 0.164), 0 6px 20px 0 rgba(228, 227, 227, 0.514);
+    color: #000000;
+
+}
+.input{
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color:#f5f5f5;
+    border:1px solid #c2c2c2; 
+}
+.error{
+    color: red;
+}
+#submit{
+    background-color: rgb(7, 214, 17);
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#reset{
+    background-color: rgb(7, 214, 17);
+    color: white;
+    font-size: 14px;
+    height: 28px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0.5px 0.5px 0 rgba(167, 167, 167, 0.685), 0 6px 10px 0 rgb(209, 208, 208);
+}
+
+#submit:hover{
+    background-color: rgb(2, 158, 10);
+}
+#reset:hover{
+    background-color: rgb(2, 158, 10);
+}
+
+
+@media only screen and (max-width: 800px) {
+	
+	#search{
+		width: 180px;
+		height: 15px;
+		margin-top: 20px;
+	}
+	
+	#search_icon{
+    height: 30px;
+    width: 30px;
+  }
+
+  .navBar{
+    padding:10px;
+    height: 150px;
+    align-items: flex-start;
+    justify-content: space-between;
+	  flex-direction: column !important;
+    flex-wrap: wrap;
+  }
+  .navLinks {
+    width: 100%;
+    font-weight: bold;
+    font-size:15px;
+  }
+  .registration_container{
+    width: 50% !important;
+  }
+	.overlay a {font-size: 20px}
+	.overlay .closebtn {
+	font-size: 40px;
+  justify-content: center;
+  align-items: center;
+	
+	}
+	 
+	#search_results{
+    justify-content: center;
+    align-items: center;
+		font-size: 15px;
+		margin-left: 40px;
+		width: 70%;
+	}
+  .input{
+    width: 97%;
+    margin-left:2px;
+  }
+
+	
+}

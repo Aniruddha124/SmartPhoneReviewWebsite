@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ContactUs</title>
+	<link rel="stylesheet" href="home.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <script type="text/javascript" src="home.js"></script>
+</head>
+<style>
+	body {
+		text-decoration: none;
+		background-color: rgb(221, 220, 220);
+		margin-left: 50px;
+		margin-right: 50px;
+		color: black;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	#errorSpan {
+		color: red;
+	}
+
+	#cfcontainer {
+		height: 80vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#contactusform {
+		width: 25%;
+		height: 70%;
+		border-radius: 5px;
+		padding: 20px;
+		background-color: white;
+		box-shadow: 0 4px 8px 0 rgba(114, 114, 114, 0), 0 6px 20px 0 rgba(201, 200, 200, 0.514);
+		color: #000000;
+	}
+
+	input.ng-invalid {
+		background-color: rgb(255, 167, 167);
+	}
+
+	input.ng-valid {
+		background-color: rgb(167, 255, 174);
+	}
+
+	textarea.ng-invalid {
+		background-color: rgb(255, 167, 167);
+	}
+
+	textarea.ng-valid {
+		background-color: rgb(167, 255, 174);
+	}
+
+	#subbut {
+		width: 100px;
+		height: 25px;
+		background-color: rgb(7, 214, 17);
+		color: white;
+		font-size: 14px;
+		border-radius: 5px;
+		box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		border: 2px solid rgb(2, 150, 12);
+		/* text-decoration: none; */
+	}
+
+	#in1,
+	#in2 {
+		width: 250px;
+		padding: 3px;
+		border: none;
+		border: 1px solid #c2c2c2;
+	}
+
+	#in3 {
+		border: none;
+		border: 1px solid #c2c2c2;
+	}
+
+	#lbl1,
+	#lbl2 {
+		margin-right: 200px;
+	}
+
+	#lbl3 {
+		margin-right: 183px;
+	}
+
+	#snackbar {
+		visibility: hidden;
+		min-width: 250px;
+		margin-left: -125px;
+		background-color: rgb(11, 145, 22);
+		color: rgb(255, 255, 255);
+		text-align: center;
+		border-radius: 2px;
+		padding: 16px;
+		position: fixed;
+		z-index: 1;
+		left: 50%;
+		bottom: 30px;
+		font-size: 17px;
+	}
+
+	#snackbar.show {
+		visibility: visible;
+		-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	}
+
+	@-webkit-keyframes fadein {
+		from {
+			bottom: 0;
+			opacity: 0;
+		}
+
+		to {
+			bottom: 30px;
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadein {
+		from {
+			bottom: 0;
+			opacity: 0;
+		}
+
+		to {
+			bottom: 30px;
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeout {
+		from {
+			bottom: 30px;
+			opacity: 1;
+		}
+
+		to {
+			bottom: 0;
+			opacity: 0;
+		}
+	}
+
+	@keyframes fadeout {
+		from {
+			bottom: 30px;
+			opacity: 1;
+		}
+
+		to {
+			bottom: 0;
+			opacity: 0;
+		}
+	}
+
+	.inputdiv {
+		display: flex;
+	}
+
+	@media only screen and (max-width:750px) {
+		#contactusform {
+			width: 100% !important;
+      height: 400px;
+		}
+	}
+</style>
+
+<body>
+	<div id="overlay" class="overlay">
+		
+		<a href="javascript:void(0)" class="closebtn" onclick="close_search()">&times;</a>
+		<div class="overlay-content">
+			<h2>Search Here</h2>
+			<input type = "text" placeholder = "Search" onkeyup = "search()" id="search">
+	
+			<div id="search_results"><h2>Search Results</h2>
+				<ul id="phones_array">
+					<li><a href="iphone12pro.html">Apple iPhone 12 Pro</a></li>
+					<li><a href="#">Apple iPhone 12 Pro Max</a></li>
+					<li><a href="#">Apple iPhone 12 mini</a></li>
+					<li><a href="#">Apple iPhone 11</a></li>
+					<li><a href="#">Apple iPhone XS</a></li>
+					<li><a href="#">Apple iPhone 11 Pro Max</a></li>
+					<li><a href="#">Apple iPhone XR</a></li>
+					<li><a href="#">Apple iPhone 8</a></li>
+					<li><a href="#">Apple iPhone 8 Plus</a></li>
+
+					<li><a href="#">Google Pixel 4a</a></li>
+					<li><a href="#">Google Pixel 4</a></li>
+					<li><a href="#">Google Pixel 3 XL</a></li>
+					<li><a href="#">Google Pixel 2 XL</a></li>
+					<li><a href="#">Google Pixel 5</a></li>
+					<li><a href="#">Google Pixel 3</a></li>
+					<li><a href="#">Google Pixel 2</a></li>
+					<li><a href="#">Google Pixel </a></li>
+					<li><a href="#">Google Pixel 4 XL</a></li>
+
+					<li><a href="#">Huawei P30 Pro</a></li>
+					<li><a href="#">Huawei Mate 20 Pro</a></li>
+					<li><a href="#">Huawei Nova 3</a></li>
+					<li><a href="#">Huawei P9</a></li>
+					<li><a href="#">Huawei Nova 3i</a></li>
+					<li><a href="#">Huawei P8 Lite</a></li>
+					<li><a href="#">Huawei P20 Lite</a></li>
+					<li><a href="#">Huawei P20 Pro</a></li>
+					<li><a href="#">Huawei Ascend G510</a></li>
+				  </ul>			
+			</div>
+		</div>
+  </div>
+		<div id="logoSearch">
+			<h1 id="logo">Review.com</h1>
+			<img alt = "Search" onclick = open_search() id="search_icon"src="magnifying-glass.png"></img>
+		</div>
+
+	<div class="navBar" id="navBar">
+		<div class="navLinks"><a href="index.html">Home</a></div>
+		<div class="navLinks"><a href="index.html#news">News</a></div>
+		<div class="navLinks"><a href="contactform1.html">Contact Us</a></div>
+		<div class="navLinks"><a href="registration.html">Sign Up/In</a></div>
+	</div>
+    <div id="cfcontainer">
+        <div id="contactusform">
+            <h2>Contact Us</h2>
+            
+            <form name="cf" id="cf" ng-app="contact-form" name="cf" ng-controller="cfcontroller"
+                ng-submit="submitForm()">
+                <label id="lbl1">Name: </label><br>
+                <div class="inputdiv">
+                    <input id="in1" type="text" ng-model="name" required><br>
+                </div><br>
+                <label id="lbl2">E-mail: </label><br>
+                <div class="inputdiv">
+                    <input id="in2" type="email" name="emailAdd" ng-model="email" required>
+                </div>
+                <span id="errorSpan" ng-show="cf.emailAdd.$error.email">Not a valid e-mail address</span>
+                <br><br>
+                <label id="lbl3">Message: </label><br>
+                <div class="inputdiv">
+                    <textarea id="in3" name="message" ng-model="msg" required placeholder="Enter your message..." rows="4" cols="33"></textarea><br>
+                </div>
+                <br><input id="subbut" type="submit" ng-submit="submitForm()">
+            </form>
+        </div>
+    </div>
+    <div id="snackbar">Submitted Successfully!</div>
+    <div id = "footer">
+			&copy;Copyright 2021 Review.com. All rights reserved
+		</div>
+    <script>
+        
+        var app = angular.module('contact-form', []);
+        app.controller("cfcontroller", function ($scope) {
+            $scope.submitForm = function () {
+                this.name = document.getElementById("in1").value;
+                this.name = "";
+                this.email = document.getElementById("in2").value;
+                this.email = "";
+                this.msg = document.getElementById("in3").value;
+                this.msg = "";
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+            }
+        });
+    </script>
+</body>
